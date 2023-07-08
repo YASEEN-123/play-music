@@ -5,6 +5,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="cspd-player.css">
+
+
+
+
     <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -86,22 +90,24 @@
 
 <div class="bodytext">
 
-    <div class="card" style="width: 18rem;" >
+    <div class="card" style="width: 18rem;" href="javascript:void(0);" onclick="cspd_change_music('Alan Walker, K-391 & Emelie Hollow - Lily (Lyrics).mp3');">
         <img class="card-img-top" src=" https://cdns-images.dzcdn.net/images/cover/7a32bb2963914edf08f9f3fdb3ebb553/264x264.jpg" alt="Card image cap">
         <div class="card-body" >
+            
           <h5 class="card-title">lily was a littel gril</h5>
           <p class="card-text">by lily</p>
 
+            
           
         </div>
       </div>
 
 
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 18rem;"  href="javascript:void(0);" onclick="cspd_change_music('Bad_Boy.mp3');">
     <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/8/80/Bad_boy.jpg " alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">BAD BOY</h5>
-      <p class="card-text">bad boy</p>
+      <p class="card-text" href="javascript:void(0);" onclick="cspd_change_music('Juice WRLD ft. Young Thug - Bad Boy (Official Audio).mp3');">bad boy</p>
    
       
       </audio>
@@ -111,7 +117,7 @@
 </div>
 
 
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 18rem;" href="javascript:void(0);" onclick="cspd_change_music('nwantiti.mp3');">
     <img class="card-img-top" src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwwWkgdHMtUZGco2re8vnRsx1JX8b3khMD4w&usqp=CAU" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">love nwitity</h5>
@@ -125,7 +131,7 @@
 
 
 
-  <div class="card" style="width: 18rem;">
+  <div class="card" style="width: 18rem;" href="javascript:void(0);" onclick="cspd_change_music('Unstoppable.mp3');">
     <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN7ZHIO0MBOPAkvig3QAGKAmdrAgrsHhJerw&usqp=CAU" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">unstoppable</h5>
@@ -138,7 +144,7 @@
 
 
 
-  <div class="card" style="width: 18rem;">
+  <div class="card" style="width: 18rem;"href="javascript:void(0);" onclick="cspd_change_music('moonlight.mp3');">
     <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTexFx0QEpO2WPjndhDgH8JToRpJPmIVlbSg&usqp=CAU" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">by x</h5>
@@ -153,7 +159,7 @@
 
 
 
-  <div class="card" style="width: 18rem;">
+  <div class="card" style="width: 18rem;"href="javascript:void(0);" onclick="cspd_change_music('streets.mp3');">
     <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDup3y_npOjQUOgqSAR1PcTnTwCdJ6BRGGGg&usqp=CAU" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Streets</h5>
@@ -165,49 +171,57 @@
   </div>
 
 
-  <li><a href="javascript:void(0);" onclick="cspd_change_music('assets/snake_bazaar-noisy_oyster.mp3');">Play snake bazaar by Noisy Oyster</a></li>
-  <li><a href="javascript:void(0);" onclick="cspd_change_music('assets/roll_on-noisy_oyster_CLIP.mp3');">Play roll on noisy oyster CLIP</a></li>
+
   
-  
-<audio id="cs_audio" controls>
-    <source src="assets/roll_on-noisy_oyster_CLIP.mp3" type="audio/mpeg">
+  <audio id="cs_audio" controls>
+    <source src="Alan Walker, K-391 & Emelie Hollow - Lily (Lyrics).mp3" type="audio/mpeg">
+    <source src="Bad_Boy.mp3" type="audio/mpeg">
+    <source src="nwantiti.mp3" type="audio/mpeg">
+    <source src="Unstoppable.mp3" type="audio/mpeg">
+    <source src="moonlight.mp3" type="audio/mpeg">
+    <source src="streets.mp3" type="audio/mpeg">
+
+
   </audio>
+  <li><a href="javascript:void(0);" onclick="cspd_change_music('Alan Walker, K-391 & Emelie Hollow - Lily (Lyrics).mp3');">Play snake bazaar by Noisy Oyster</a></li>
+<li><a href="javascript:void(0);" onclick="cspd_change_music('Bad_Boy.mp3');">Play roll on noisy oyster CLIP</a></li>
+
+  
   <div style="text-align: center;">
+  
+  <div id="cs_audioplayer">
+  
+       <span style="position: relative;left: 0;float: left;font-size: 0.87em;"><span id="cs_audio_current_time">0:0</span></span>
+  
+       <span id="cs_play_pause_btn" style="position: relative;">
+           <i class="far fa-play-circle" id="cs_audio_play"></i>
+           <i class="far fa-pause-circle" id="cs_audio_pause"></i>
+       </span>
+  
+       <span id="cs_audio_sound" style="position: relative;right: 5px;float: right;margin-left: 15px;top: -2px;">
+           <i style="vertical-align: middle;font-size: 1.14em;" class="fas fa-volume-down"></i>
+           <div class="cs_volBar" style="height: 6px; width: 65px;background-color: #ccc;display: inline-block;cursor: pointer;">
+             <div class="cs_volume" style="height: 6px;width: 28px;background-color: red;position: absolute;"></div>
+           </div>
+  
+       </span>
+       <span id="cs_audio_duration" style="position: relative;right: 0;float: right;padding-left: 10px;font-size: 0.87em;"></span>
+  
+       <div class="cs_audio_bar">
+           <div class="cs_audio_bar_now"></div>
+           <div class="cs_audio_bar_loaded"></div>
+       </div>
+  
+  </div>
+  </div>
+  
 
-    <div id="cs_audioplayer">
-    
-         <span style="position: relative;left: 0;float: left;font-size: 0.87em;"><span id="cs_audio_current_time">0:0</span></span>
-    
-         <span id="cs_play_pause_btn" style="position: relative;">
-             <i class="far fa-play-circle" id="cs_audio_play"></i>
-             <i class="far fa-pause-circle" id="cs_audio_pause"></i>
-         </span>
-    
-         <span id="cs_audio_sound" style="position: relative;right: 5px;float: right;margin-left: 15px;top: -2px;">
-             <i style="vertical-align: middle;font-size: 1.14em;" class="fas fa-volume-down"></i>
-             <div class="cs_volBar" style="height: 6px; width: 65px;background-color: #ccc;display: inline-block;cursor: pointer;">
-               <div class="cs_volume" style="height: 6px;width: 28px;background-color: red;position: absolute;"></div>
-             </div>
-    
-         </span>
-         <span id="cs_audio_duration" style="position: relative;right: 0;float: right;padding-left: 10px;font-size: 0.87em;"></span>
-    
-         <div class="cs_audio_bar">
-             <div class="cs_audio_bar_now"></div>
-             <div class="cs_audio_bar_loaded"></div>
-         </div>
-    
-    </div>
-    </div>
+<!-- 
+  <li style="color: wheat;"><a href="javascript:void(0);" onclick="cspd_change_music('Bad_Boy.mp3');">bad Boy</li>/a></li>
+    <li style="color: wheat;"><a href="javascript:void(0);" onclick="cspd_change_music('assets/roll_on-noisy_oyster_CLIP.mp3');">Play roll on noisy oyster CLIP</a></li>
+     -->
 
-
-</div>
-
-
-
-
-
-
+  
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
@@ -232,7 +246,7 @@
 });
 
     </script>
-    <script src="cspd-player.js"></script>
+<script src="cspd-player.js"></script>
 
 </body>
 </html>
